@@ -5,9 +5,9 @@ xSpace = permute(xSpace, [2,1,3]);
 ySpace = permute(ySpace, [2,1,3]);
 zSpace = permute(zSpace, [2,1,3]);
 
-xMean = sum(sum(sum(xSpace)))/(sum(sum(sum(xSpace~=0))));
-yMean = sum(sum(sum(ySpace)))/(sum(sum(sum(ySpace~=0))));
-zMean = sum(sum(sum(zSpace)))/(sum(sum(sum(zSpace~=0))));
+xMean = sum(sum(sum(absData.*xSpace)))/(sum(sum(sum(absData~=0))));
+yMean = sum(sum(sum(absData.*ySpace)))/(sum(sum(sum(absData~=0))));
+zMean = sum(sum(sum(absData.*zSpace)))/(sum(sum(sum(absData~=0))));
 
 distList = zeros(size(grain_coord, 1));
 i=1;
